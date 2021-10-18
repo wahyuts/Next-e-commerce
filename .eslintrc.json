@@ -1,0 +1,11 @@
+{
+  "extends": ["next", "airbnb-base", "prettier"],
+  "rules": {
+    // rule from next plugin
+    "@next/next/no-img-element": "off",
+
+    // rule from airbnb-base
+    "spaced-comment": "off",
+    "arrow-body-style": 0
+  }
+}
