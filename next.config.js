@@ -1,7 +1,7 @@
 module.exports = {
-  reactStrictMode: true,
-  extends: [
-    //...
-    "plugin:@next/next/recommended",
-  ],
+    reactStrictMode: true,
+    extends: [
+        //...
+        'plugin:@next/next/recommended'
+    ]
 };
