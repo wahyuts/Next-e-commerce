@@ -1,11 +1,17 @@
 {
-    "extends": ["next", "airbnb-base", "prettier"],
+    "extends": ["next", "plugin:import/recommended", "airbnb-base", "prettier"],
     "rules": {
         // rule from next plugin
         "@next/next/no-img-element": "off",
+        "@next/next/no-document-import-in-page": "off",
 
         // rule from airbnb-base
         "spaced-comment": "off",
-        "arrow-body-style": 0
+        "no-undef": "off",
+        "class-methods-use-this": "off",
+        "arrow-body-style": 0,
+
+        // rule from plugin:import/recommended
+        "import/no-mutable-exports": 0
     }
 }
