@@ -13,7 +13,7 @@ const Footerr = () => {
     return (
         <div>
             <footer className={classes.footer}>
-                <Typography>All Rights Reserved. Next Amazona</Typography>
+                <Typography>All Rights Reserved. Tokyofoam</Typography>
             </footer>
         </div>
     );

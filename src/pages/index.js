@@ -1,22 +1,38 @@
 import Head from 'next/head';
-import Layout from '../components/layout';
+
+//MaT UI
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles(() => ({
+    main: {
+        minHeight: '80vh'
+    }
+}));
 
 export default function Home() {
+    const classes = useStyles();
     return (
-        <div>
+        <div className={classes.main}>
             <Head>
                 <title>Tokyo Foam || Home</title>
             </Head>
-            <Layout>
-                <div>
-                    <h1>Product</h1>
-                    <ul>
-                        <li>Product 1</li>
-                        <li>Product 2</li>
-                        <li>Product 3</li>
-                    </ul>
-                </div>
-            </Layout>
+
+            <div>
+                <h1>Carousel Homepage</h1>
+            </div>
+            <article>
+                <p>Welcome to tokyofoam</p>
+                <p>heres the image or change width the image</p>
+            </article>
+            <div>
+                <h1>Carousel Promo Banner</h1>
+            </div>
+            <div>
+                <p>List Product Carousel</p>
+            </div>
+            <div>
+                <p>List Product Bundling Carousel</p>
+            </div>
         </div>
     );
 }

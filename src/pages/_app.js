@@ -1,16 +1,19 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-// import '../../public/assets/css/globals.css';
+import '../../public/assets/css/globals.css';
 
 //MuI Stuff
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-
-// import themeFile from '../utils/theme';
 import theme from '../utils/theme2';
+
+import GeneralLayout from '../components/general-layout';
 
 function MyApp(props) {
     const { Component, pageProps } = props;
+    const router = useRouter();
+    const currentPath = router.pathname;
 
     // Remove the server-side injected CSS. (Agar Met Ui dapat bekerja di next)
     useEffect(() => {
@@ -20,14 +23,25 @@ function MyApp(props) {
         }
     }, []);
 
+    let trueComponent =
+        currentPath === '/sign-in' || currentPath === '/sign-up' ? (
+            <Component {...pageProps} />
+        ) : (
+            <GeneralLayout>
+                <Component {...pageProps} />;
+            </GeneralLayout>
+        );
+
     return (
-        <ThemeProvider theme={theme}>
+        <div>
             <Head>
                 <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
             </Head>
-            <CssBaseline />
-            <Component {...pageProps} />;
-        </ThemeProvider>
+            <ThemeProvider theme={theme}>
+                <CssBaseline />
+                {trueComponent}
+            </ThemeProvider>
+        </div>
     );
 }
 

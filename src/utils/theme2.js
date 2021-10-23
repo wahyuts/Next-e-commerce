@@ -1,13 +1,39 @@
-import { createTheme, responsiveFontSizes } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
 let theme = createTheme({
     palette: {
         primary: {
+            // main: '#673ab7'
             main: '#673ab7'
-            // main: '#ec407a'
         },
         secondary: {
             main: '#ffffff'
+        },
+        specialGrey: {
+            main: '#F7F7F7'
+        },
+        blackText: {
+            main: '#474747'
+        },
+        whiteText: {
+            main: '#ffffff'
+        },
+        greyText: {
+            main: '#A6A6A6'
+        },
+        fontHeadnavColor: {
+            // main: '#616161'
+            main: '#474747'
+        },
+        buttonBackground: {
+            main: '#2C2C2C'
+        },
+        addToCartButtonBackground: {
+            main: '#FF7373'
+        },
+        neutral: {
+            main: '#64748B',
+            contrastText: '#fff'
         }
     },
     breakpoints: {
@@ -18,22 +44,9 @@ let theme = createTheme({
             lg: 1280,
             xl: 1920
         }
-    },
-
-    invisibleSeperator: {
-        border: 'none',
-        margin: 4
-    },
-    visibleSeperator: {
-        width: '100%',
-        borderBottom: '1px solid rgba(0,0,0,0.1)',
-        marginBottom: 20
-    },
-    typography: {
-        useNextVariants: true
     }
 });
 
-theme = responsiveFontSizes(theme);
+// theme = responsiveFontSizes(theme);
 
 export default theme;

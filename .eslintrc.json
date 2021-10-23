@@ -8,8 +8,10 @@
         // rule from airbnb-base
         "spaced-comment": "off",
         "no-undef": "off",
+        "prefer-const": "off",
         "class-methods-use-this": "off",
         "arrow-body-style": 0,
+        "no-nested-ternary": "off",
 
         // rule from plugin:import/recommended
         "import/no-mutable-exports": 0
